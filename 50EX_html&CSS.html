@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  
+
+  <head> 
+    <title>50-Excercises</title>
+    <meta charset="utf-8" />
+    <script src="50EX_DOM.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+
+
+    <style>
+      /* CSS EXERCISES
+
+11) Give a maximum width to the body and center it in the page */
+body {
+  display:flex; 
+  flex-direction:column; 
+  justify-content:center;
+  min-height:100vh;
+}
+/* 12) Set every h1 to be centered */
+h1 {
+  justify-content: center;
+}
+/* 13) Change the color of each link in the page */
+a:link{
+  color: blue;
+}
+/* 14) Create a class with a border */
+.class{
+  border: 1px solid black;
+}
+
+/* 15) Set table to have rounded borders 
+*/
+tr:first-child td:first-child {
+    border-radius: 0.6em 0 0 0;
+}
+tr:first-child td:last-child {
+    border-radius: 0 0.6em 0 0;
+}
+tr:last-child td:first-child {
+    border-radius: 0 0 0 0.6em;
+}
+tr:last-child td:last-child {
+    border-radius: 0 0 0.6em 0;
+}
+
+/* 16) Add margin between every paragraph */
+p {
+  margin: 10px;
+}
+/* 17) Create a class which change font size and boldness
+ */
+ .class {
+   font-size: 10px;
+   font-weight: bold;
+ } 
+ /* 18) Create a class to hide a content */
+ .hide {
+   display: none;
+ }
+
+/* 19) Add a green border to each td */
+table, tr, td{
+        border: 1px solid green;
+        padding: 0.5em 1em;
+      }
+
+/* 20) Add a dotted red border to each tr */
+table, tr {
+  border-style: dotted;
+}
+
+/* SOME EXTRAS CSS FOR MY HTML PAGE */
+      html, body{
+        max-width: 100%;
+        
+        height:100%;
+      }
+      #container{
+        min-height: 100%;
+      }
+      #main{
+        overflow: auto;
+        padding-bottom:100px ;
+      }
+      #footer {
+        background-color: burlywood;
+        position: relative;
+        height: 100px;
+        margin-top:-50px;
+        clear: both;        
+      }       
+      table{        
+        margin-left:auto; 
+       margin-right:auto;
+        align-items: center;
+        border-spacing: 0;        
+      }
+      tr:hover {
+        background-color: burlywood;
+        }
+        #sp{
+          text-align: center;
+          background-color: cornflowerblue;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+        #name{
+          font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          font-weight: lighter;
+        }
+    </style>
+  </head>
+
+  <body>
+    <!-- HTML EXERCISES
+
+    1) Create a title for the page
+    2) Create a heading
+    3) Create an ordered list
+    4) Create a table with 5 columns and 4 rows
+    5) Add an image for each second cell of the first row
+    6) Merge together 2 table cells
+    7) Add a link for every image
+    8) Divide the page using a horizontal line
+    9) Create a container with a nested paragraph and a nested unordered list
+    10) Create a footer with some information about the page creator  -->
+
+  <div id="container">
+    <header id="main">
+    <h1>Basic Excercises</h1>
+    <ol>
+      <li>Creation of Ordered List</li>
+      <li>Creation of Table with different properties</li>
+      <li>Adding images and links to one row of table</li>
+      <li>Dividing the page by horizontal line</li>
+      <li>Creation of the ul within container</li>
+      <li>Footer creation</li>
+    </ol>
+    <div >    
+    <table id="tbl1" >
+      <tr>
+        <td><a href="https://sea-storiesgh.com/">
+          <img src="https://sea-storiesgh.com/wp-content/uploads/2018/11/strive.jpg" alt="" height=50 width=100></img></a></td>
+        <td><a href="https://sea-storiesgh.com/">
+          <img src="https://sea-storiesgh.com/wp-content/uploads/2018/11/strive.jpg" alt="" height=50 width=100></img></a></td>
+        <td><a href="https://sea-storiesgh.com/">
+          <img src="https://sea-storiesgh.com/wp-content/uploads/2018/11/strive.jpg" alt="" height=50 width=100></img></a></td>
+        <td><a href="https://sea-storiesgh.com/">
+          <img src="https://sea-storiesgh.com/wp-content/uploads/2018/11/strive.jpg" alt="" height=50 width=100></img></a></td>
+        <td><a href="https://sea-storiesgh.com/">
+          <img src="https://sea-storiesgh.com/wp-content/uploads/2018/11/strive.jpg" alt="" height=50 width=100></img></a></td>
+      </tr>
+      <tr>
+        <td>Row2, Column1</td>
+        <td>Row2, Column2</td>
+        <td>Row2, Column3</td>
+        <td>Row2, Column4</td>
+        <td>Row2, Column5</td>
+      </tr>
+      <tr>
+        <td>Row3, Column1</td>
+        <td>Row3, Column2</td>
+        <td>Row3, Column3</td>
+        <td>Row3, Column4</td>
+        <td>Row3, Column5</td>
+      </tr>
+      <tr>
+        <td>Row4, Column1</td>
+        <td>Row4, Column2</td>
+        <td>Row4, Column3</td>
+        <td colspan="2" id="sp">Merged-Cells</td>
+        <!-- <td>Row4, Column5</td> -->
+      </tr>      
+    </table>
+  </div>
+    <hr/>
+    
+    <div>
+      <p>This is a nested paragraph in container</p>
+      <p>This is second nested paragraph in container for margin</p>
+      <ul>
+        <li>This is a UL nested in the container</li>
+      </ul>
+    </div>
+  </header>
+  </div>
+       
+    <footer id="footer"> Prepared by:<span id="name">Hammad Ali</span>  </footer> 
+
+
+
+
+  </body>
+</html>
